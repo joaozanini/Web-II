@@ -1,7 +1,7 @@
 <body>
     <div class="container">
         <div class="img_logo">
-            <img src="logo_img.png" class="logo">
+            <img src="/assets/images/logo_img.png" class="logo">
             <H1>RepairIT</H1>
         </div>
         <h2>Entrar</h2>
@@ -11,9 +11,9 @@
         </div>
         <div class="password">
            <label for="password">Password</label>
-           <input type="text" id="password" placeholder="*****">
-           <a href="#">
-             <img src="icone_olho.png" alt="lock--v1">
+           <input type="password" id="password_input" required>
+           <a (click)="togglePassword()" id="href_icon">
+             <img src="/assets/images/icone_olho_fechado.png" alt="lock--v1" id="icon_olho">
            </a>
         </div>
            <a href="#">

@@ -12,6 +12,8 @@ body {
 
 a {
     text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
 }
 
 input {
@@ -21,6 +23,8 @@ input {
     border-radius: 10px;
     width: 320px;
     height: 30px;
+    background-color: transparent;
+    outline: none;
 }
 
 label {
@@ -68,10 +72,6 @@ label {
     height: 50px;
 }
 
-.email input {
-    background-color: transparent;
-    outline: none;
-}
 
 .password {
     text-align: left;
