@@ -1,0 +1,167 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  background: #f5f5f5;
+}
+
+.sidebar {
+  width: 270px;
+  background: #ffffff;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 800;
+  font-size: 30px;
+  color: var(--second-color);
+  margin-bottom: 60px;
+  margin-left: 10px;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #444;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.sidebar a:hover {
+  color: var(--primary-color);
+}
+
+.content {
+  flex: 1;
+  padding: 30px;
+}
+
+.titulo {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+::ng-deep .acao {
+  background-color: #aaad00 !important;
+  border-color: #aaad00 !important;
+  color: black !important;
+  border-radius: 30px;
+  width: 225px; 
+}
+
+::ng-deep .botao-ver-solicitacao {
+  background-color: #003a00 !important;
+  border-color: #003a00 !important;
+  color: white !important;
+  border-radius: 30px;
+}
+
+
+.botao-nova-solicitacao {
+  position: fixed;
+  bottom: 40px;
+  left: 55%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  font-size: 25px;
+  color: white;
+  background: var(--second-color);
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* css card*/
+
+:host ::ng-deep .p-card {
+  background: white !important;
+  color: #333 !important;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* css tabela */
+:host ::ng-deep .p-datatable {
+  background: white !important;
+}
+
+:host ::ng-deep .p-datatable table {
+  background: white !important;
+  border: 2px solid transparent !important;
+  border-collapse: collapse;
+}
+
+:host ::ng-deep .p-datatable thead th {
+  background: #f5f5f5 !important;
+  color: #333 !important;
+  font-weight: 600;
+  border: 1px solid transparent !important;
+  border-collapse: collapse;
+}
+
+:host ::ng-deep .p-datatable tbody tr {
+  background: white !important;
+  color: #333 !important;
+}
+
+:host ::ng-deep .p-datatable tbody tr:hover {
+  background: #fafafa !important;
+}
+
+/* css breadcrumb */
+
+:host ::ng-deep .p-breadcrumb {
+  background: transparent !important;
+  border: none !important;
+  margin-bottom: 20px;
+}
+
+:host ::ng-deep .p-breadcrumb a {
+  color: #666 !important;
+}
+
+:host ::ng-deep .p-breadcrumb .p-menuitem-text {
+  color: #666 !important;
+}
+
+.estado-aberta {
+  background-color: #9e9e9e;
+  color: white;
+}
+
+.estado-orcada {
+  background-color: #6d4c41;
+  color: white;
+}
+
+.estado-aprovada {
+  background-color: #fdd835;
+  color: black;
+}
+
+.estado-rejeitada {
+  background-color: #e53935;
+  color: white;
+}
+
+.estado-arrumada {
+  background-color: #1e88e5;
+  color: white;
+}
