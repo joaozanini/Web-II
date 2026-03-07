@@ -1,0 +1,94 @@
+<div class="layout">
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="assets/images/logo_img.png" alt="logo RepairIT" />
+      <span>RepairIT</span>
+    </div>
+
+    <nav>
+      <a routerLink="/home">
+        <i class="pi pi-home"></i>
+        Minhas solicitações
+      </a>
+
+      <a routerLink="/new-request">
+        <i class="pi pi-plus-circle"></i>
+        Solicitação de Manutenção
+      </a>
+
+      <a routerLink="/settings">
+        <i class="pi pi-cog"></i>
+        Configurações
+      </a>
+
+      <a routerLink="/history">
+        <i class="pi pi-history"></i>
+        Histórico
+      </a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <p-breadcrumb [model]="breadcrumbItems"> </p-breadcrumb>
+
+    <p-card>
+      <h2 class="titulo">Minhas solicitações</h2>
+
+      <p-table [value]="solicitacoes" responsiveLayout="scroll">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Descrição do Equipamento</th>
+            <th>Data/Hora</th>
+            <th>Valor</th>
+            <th>Estado</th>
+            <th>Ação</th>
+            <th></th>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="body" let-s>
+          <tr>
+            <td>{{ s.equipamento }}</td>
+            <td>{{ s.data }}</td>
+            <td>{{ s.valor }}</td>
+
+            <td>
+              <p-tag [value]="s.estado" [ngClass]="getEstadoClass(s.estado)"> </p-tag>
+            </td>
+
+            <td>
+              <p-button
+                *ngIf="s.estado === 'ORÇADA'"
+                label="Aprovar/Rejeitar Serviço"
+                styleClass="acao"
+              >
+              </p-button>
+
+              <p-button *ngIf="s.estado === 'ABERTA'" label="" styleClass="acao"> </p-button>
+
+              <p-button *ngIf="s.estado === 'REJEITADA'" label="Resgatar Serviço" styleClass="acao">
+              </p-button>
+
+              <p-button *ngIf="s.estado === 'ARRUMADA'" label="Pagar Serviço" styleClass="acao">
+              </p-button>
+            </td>
+
+            <td>
+              <p-button
+                label="Ver solicitação"
+                styleClass="botao-ver-solicitacao"
+                icon="pi pi-eye"
+                size="small"
+              >
+              </p-button>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-card>
+
+    <button class="botao-nova-solicitacao">
+      <i class="pi pi-plus"></i>
+    </button>
+  </main>
+</div>
